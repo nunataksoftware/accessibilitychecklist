@@ -1,0 +1,30 @@
+El archivo humans.txt explica el equipo, tecnología y
+recursos creativos detrás de este sitio.
+
+_______________________________________________________________________________
+
+/*TEAM*/
+
+Líder de Proyecto y Programador Flask + jQuery: Guillermo Nuñez
+Contact: gui.nunez [at] gmail.com
+From: Mendoza, Argentina
+
+Diseño y Maquetación: Adriel Zarate
+Contact: adriel_zarate@hotmail.com
+From: Mendoza, Argentina
+
+
+_______________________________________________________________________________
+
+/*SITE*/
+
+{% if repo %}
+Last update: {{ fecha.strftime("%Y-%m-%d") }} por {{ autor }}
+{% endif %}
+Standards: HTML5, CSS3, Javascript
+Components: jQuery
+Software: Python, Flask
+Hecho por Nunatak Software - nunataksoftware.com
+_______________________________________________________________________________
+
+/*THANKS*/

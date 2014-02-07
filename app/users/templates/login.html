@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Login</title>
+        <link href="/static/css/main.css" rel="stylesheet">
+    </head>
+    <body class="login-admin">
+        
+        <!-- Mensajes -->
+        {% with mensajes = get_flashed_messages() %}
+            {% for mensaje in mensajes %}
+                {{ mensaje }}
+            {% endfor %}
+        {% endwith %}
+        
+        <form action="" method="POST">
+            <a href="/index">
+                <img id="accessibilitychecklist-logo-pie" src="/static/img/accessibilitychecklist-logo-pie.svg" alt="Accessibility checklist">
+            </a>
+            {% from "macros.html" import render_field %}
+            {{ render_field(form.username) }}
+            {{ render_field(form.password) }}
+            <input type="submit" value="Enter" class="btn_naranja">
+        </form>
+    </body>
+</html>
