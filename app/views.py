@@ -30,6 +30,7 @@ _punct_re = re.compile(r'[\t !"#$%&\'()*\-/<=>¿?@\[\\\]^_`{|},.]+')
 
 cache = SimpleCache()
 
+app.config['SERVER_NAME'] = 'accessibilitychecklist.dev:5000'
 
 def slugify(value, delim=u'-'):
     """Generates an ASCII-only slug."""
@@ -53,11 +54,9 @@ def urlencode_filter(s):
     return Markup(s)
 
 
-@app.route('/')
-@app.route('/index/')
-def index(id=None, slug=None):
-    return render_template("index.html")
-
+@app.route('/', subdomain="<lang>", methods=['GET', 'POST'])
+def index(lang=None):
+    return render_template("index.html", lang=lang)
 
 
 @app.route('/humans.txt')

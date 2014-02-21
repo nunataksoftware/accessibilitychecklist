@@ -23,6 +23,11 @@ THREADS_PER_PAGE = 8
 BABEL_DEFAULT_LOCALE = "es"
 BABEL_DEFAULT_TIMEZONE = "America/Argentina/Mendoza"
 
+LANGUAGES = {
+    'en': 'English',
+    'es': 'Español'
+}
+
 # Email
 
 SMTP_HOST = 'mail.nunataksoftware.com'
