@@ -6,6 +6,8 @@ _basedir = ROOT_DIR = os.path.abspath(os.path.dirname(__file__))
 
 ADMINS = frozenset(['gui.nunez@gmail.com'])
 
+VERSION_ACTUAL = '1.0'
+
 UPLOADS_DIR = os.path.join(_basedir, "app/static/uploads")
 DEBUG = True
 # DEBUG_TB_INTERCEPT_REDIRECTS = False
