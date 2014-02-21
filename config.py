@@ -9,6 +9,7 @@ ADMINS = frozenset(['gui.nunez@gmail.com'])
 VERSION_ACTUAL = '1.0'
 
 UPLOADS_DIR = os.path.join(_basedir, "app/static/uploads")
+USERUPLOADS_DIR = UPLOADS_DIR
 DEBUG = True
 # DEBUG_TB_INTERCEPT_REDIRECTS = False
 CSRF_ENABLED = True

@@ -9,7 +9,6 @@ from flask.ext.admin.contrib.sqla import ModelView
 from flask.ext.admin.contrib.fileadmin import FileAdmin
 
 from config import UPLOADS_DIR, USERUPLOADS_DIR
-from filters import formato_normal_fecha
 from flask.ext.babelex import Babel
 
 app = Flask(__name__)
@@ -35,21 +34,21 @@ from app.users.models import User
 from app.users.views import UserView
 
 app.register_blueprint(users)
-app.register_blueprint(pages)
-app.register_blueprint(checklist)
+#app.register_blueprint(pages)
+#app.register_blueprint(checklist)
 
 from app.views import *
-from app.models import *
+#from app.models import *
 
 # Flask-Admin Configuration
 admin = Admin(app, index_view=MyAdminIndexView())
 
 # Create directories to upload files
 if not os.path.exists(UPLOADS_DIR):
-    os.mkdir(UPLOADS_DIR)
+    os.makedirs(UPLOADS_DIR)
 
 if not os.path.exists(USERUPLOADS_DIR):
-    os.mkdir(USERUPLOADS_DIR)
+    os.makedirs(USERUPLOADS_DIR)
 
 
 # File-Manager Configuration

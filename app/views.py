@@ -10,19 +10,15 @@ from flask.ext.admin.contrib.sqla import ModelView
 from flask.ext.admin.base import BaseView
 
 
-from flask.ext.wtf import Form, TextField, html5, Required
 from email.mime.text import MIMEText
 import smtplib
 import git
 
 import datetime
-import feedparser
-from bs4 import BeautifulSoup
 from werkzeug.contrib.cache import SimpleCache
 
 from sqlalchemy import func
 
-from flask.ext.wtf import FileField, Required, Optional
 from config import UPLOADS_DIR, SMTP_HOST, SMTP_USER, SMTP_PASS, SMTP_PORT, SMTP_TLS, EMAIL_SUBJECT, CONTACT_TO
 import os
 import urllib

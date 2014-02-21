@@ -1,22 +1,27 @@
 #!env/bin/python
 # -*- coding: utf-8 -*-
 
-from flask.ext.wtf import Form, TextField, PasswordField, EqualTo, Required, Email
+from flask.ext.wtf import Form
+from wtforms import TextField, BooleanField, PasswordField
+from wtforms.validators import Required, EqualTo, Email
 
 
 class LoginForm(Form):
     username = TextField(u"User", [Required()])
     password = PasswordField(u"Password", [Required()])
 
-class RegistroForm(Form):
+
+class RegisterForm(Form):
     username = TextField(u"User", [Required()])
     password = PasswordField(u"Password", [Required()])
-    repassword = PasswordField(u"Repetir contraseña", [EqualTo("password")])
+    repassword = PasswordField(u"Repeat password", [EqualTo("password")])
+
 
 class ChangePassForm(Form):
     passw = PasswordField("Password",
                           [Required("Complete the field."), EqualTo("repeat", message="Passwords should be the same")])
-    repeat = PasswordField("Repetir Password", [Required("Complete the field.")])
+    repeat = PasswordField(
+        "Repeat Password", [Required("Complete the field.")])
 
 
 class EditUserForm(Form):
